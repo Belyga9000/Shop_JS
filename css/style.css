@@ -36,6 +36,10 @@
     background-color: var(--black);
 }
 
+.header__search:hover {
+    opacity: 0.5;
+}
+
 .header__nav {
     display: none;
 }
@@ -55,9 +59,17 @@
     margin: 0 0 0 31px;
 }
 
+.header__link:hover {
+    opacity: 0.5;
+}
+
 .header__menu-btn {
     border: none;
     background-color: transparent;
+}
+
+.header__menu-btn:hover {
+    opacity: 0.5;
 }
 
 .brand {
@@ -203,18 +215,28 @@
 
 .featured__btn {
     align-self: center;
-    padding: 14px 40px;
     border: 1px solid #FF6A6A;
     background-color: transparent;
     margin: 49px 0 96px 0;
+    padding: 14px 40px 14px 40px;
+    color: var(--darkpink);
+}
+
+.featured__btn:hover {
+    background-color: var(--darkpink);
+    color: var(--white);
 }
 
 .featured__btn-link {
     text-decoration: none;
-    color: #FF6A6A;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
+    color: inherit;
+}
+
+.featured__btn-link:hover {
+    color: var(--white);
 }
 
 .qualities {
@@ -310,9 +332,17 @@
     background-color: var(--darkpink);
     border: none;
     color: var(--white);
-    padding: 15px 8px 15px 8px;
+    padding: 15px 12px 15px 12px;
     border-radius: 0 25px 25px 0;
     position: absolute;
+}
+
+.subscribe__form-btn:hover {
+    opacity: 0.8;
+}
+
+.subscribe__form-btn:active {
+    background-color: red;
 }
 
 .footer__wrap {
