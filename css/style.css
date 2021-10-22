@@ -203,7 +203,7 @@ table {
 }
 
 .brand__wrp::before {
-  content: url(/img/brandpseudo.png);
+  content: url(../img/brandpseudo.png);
   margin: 0 16px 0 0;
 }
 
@@ -225,7 +225,7 @@ table {
 }
 
 .footer__subscribe {
-  background-image: url(/img/footerphoto.png);
+  background-image: url(../img/footerphoto.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -430,7 +430,7 @@ table {
 }
 
 .featured__item-btn::before {
-  content: url(/img/featured_cart.png);
+  content: url(../img/featured_cart.png);
   margin-right: 20px;
   vertical-align: sub;
   display: none;
@@ -508,19 +508,19 @@ table {
 }
 
 .sales__item-first {
-  background-image: url(/img/woman.png);
+  background-image: url(../img/woman.png);
 }
 
 .sales__item-second {
-  background-image: url(/img/item-man.png);
+  background-image: url(../img/item-man.png);
 }
 
 .sales__item-third {
-  background-image: url(/img/item-kid.png);
+  background-image: url(../img/item-kid.png);
 }
 
 .sales__item-fourth {
-  background-image: url(/img/item-accesories.png);
+  background-image: url(../img/item-accesories.png);
   flex-grow: 1;
   margin-top: 0px;
   margin-bottom: 96px;
@@ -611,7 +611,7 @@ table {
 }
 
 .registration__form-btn::after {
-  content: url(/img/arrow.png);
+  content: url(../img/arrow.png);
   margin-left: 20px;
 }
 
