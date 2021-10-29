@@ -1,6 +1,11 @@
 .featured {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+        min-width: 360px;
+        margin: auto;
+    }
 }
 
 .featured__title {
@@ -23,6 +28,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: 360px) {
+        margin-left: 0;
+    }
 }
 
 .featured__item {
@@ -85,6 +94,7 @@
     letter-spacing: 0em;
     text-align: left;
     margin: 24px 0 0 18px;
+    text-transform: uppercase;
 }
 
 .featured__item-text {
@@ -93,7 +103,6 @@
     font-weight: 300;
     line-height: 17px;
     color: #5D5D5D;
-    ;
     margin: 12px 28px 18px 18px;
 }
 
@@ -113,6 +122,10 @@
     margin: 49px 0 96px 0;
     padding: 14px 40px 14px 40px;
     color: $darkpink;
+
+    @include mobile {
+        margin: 41px 0 98px 0;
+    }
 }
 
 .featured__btn:hover {

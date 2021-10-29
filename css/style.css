@@ -199,6 +199,9 @@ table {
 }
 
 @media (max-width: 767px) {
+  .header {
+    min-width: 360px;
+  }
   .header .header__link {
     display: none;
   }
@@ -235,6 +238,7 @@ table {
   display: flex;
   max-width: 2100px;
   margin: auto;
+  margin-bottom: 64px;
 }
 @media (max-width: 1599px) {
   .brand__img {
@@ -261,8 +265,9 @@ table {
 }
 @media (max-width: 767px) {
   .brand .brand__wrp {
+    min-width: 360px;
     min-height: 363px;
-    padding: 0 0 0 68px;
+    padding: 0;
     place-content: center;
   }
 }
@@ -317,46 +322,56 @@ table {
   color: #F16D7F;
 }
 
-.footer__subscribe {
+@media (max-width: 767px) {
+  .footer {
+    min-width: 360px;
+  }
+}
+.footer .footer__subscribe {
   background-image: url(../img/footerphoto.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.footer__subscribe-wrap {
+.footer .footer__subscribe-wrap {
   display: flex;
   justify-content: space-between;
 }
-
-.footer__subscribe-quote {
+@media (max-width: 1599px) {
+  .footer .footer__subscribe-wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+.footer .footer__subscribe-quote {
   width: 360px;
   text-align: center;
 }
-
-.footer__subscribe-quote-img {
+.footer .footer__subscribe-quote .footer__subscribe-quote-img {
   margin: 97px 0 30px 0;
 }
-
-.footer__subscribe-quote-text {
+@media (max-width: 767px) {
+  .footer .footer__subscribe-quote .footer__subscribe-quote-img {
+    margin: 64px 0 29px 0;
+  }
+}
+.footer .footer__subscribe-quote .footer__subscribe-quote-text {
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
   line-height: 24px;
 }
-
-.footer__subscribe-form {
+.footer .footer__subscribe-form {
   margin: 150px 0 156px 0;
 }
-
-.footer__subscribe-form-heading {
+.footer .footer__subscribe-form .footer__subscribe-form-heading {
   font-size: 24px;
   font-weight: 700;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
 }
-
-.footer__subscribe-form-text {
+.footer .footer__subscribe-form .footer__subscribe-form-text {
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
@@ -364,15 +379,13 @@ table {
   margin: 0 0 32px 0;
   text-transform: uppercase;
 }
-
-.footer__subscribe-form-email {
+.footer .footer__subscribe-form .footer__subscribe-form-email {
   background-color: #E1E1E1;
   border: none;
   padding: 15px 64px 15px 22px;
   border-radius: 25px 0 0 25px;
 }
-
-.footer__subscribe-form-btn {
+.footer .footer__subscribe-form .footer__subscribe-form-btn {
   background-color: #F16D7F;
   border: none;
   color: #ffffff;
@@ -380,49 +393,68 @@ table {
   border-radius: 0 25px 25px 0;
   position: absolute;
 }
-
-.footer__subscribe-form-btn:hover {
+.footer .footer__subscribe-form .footer__subscribe-form-btn:hover {
   opacity: 0.8;
 }
-
-.footer__subscribe-form-btn:active {
+.footer .footer__subscribe-form .footer__subscribe-form-btn:active {
   background-color: red;
 }
-
-.footer__wrap {
+@media (max-width: 767px) {
+  .footer .footer__subscribe-form {
+    margin: 59px 0 110px 0;
+  }
+}
+.footer .footer__wrap {
   color: #ffffff;
   background-color: #000000;
 }
-
-.footer__wrap-controls {
+.footer .footer__wrap .footer__wrap-controls {
   display: flex;
   justify-content: space-between;
 }
-
-.footer__text {
+@media (max-width: 767px) {
+  .footer .footer__wrap .footer__wrap-controls {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+.footer .footer__text {
   margin: 30px 0 30px 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
 }
-
-.footer__social-list {
+.footer .footer__social-list {
   display: inline-flex;
   margin: 24px 0px 0px 0px;
 }
-
-.footer__social-list-item {
+.footer .footer__social-list .footer__social-list-item {
   margin: 0 7px 0 0;
 }
 
 .qualities {
   background: #222224;
 }
+@media (max-width: 767px) {
+  .qualities {
+    min-width: 360px;
+  }
+}
 
 .qualities__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 1599px) {
+  .qualities__list {
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 48px 0 40px 0;
+  }
 }
 
 .qualities__item {
@@ -445,14 +477,30 @@ table {
   color: #FBFBFB;
   margin: 0 0 104px 0;
 }
+@media (max-width: 1599px) {
+  .qualities__item-text {
+    margin: 0 0 47px 0;
+  }
+}
 
 .qualities__item-img {
   margin: 104px 0 28px 0;
+}
+@media (max-width: 1599px) {
+  .qualities__item-img {
+    margin: 0 0 28px 0;
+  }
 }
 
 .featured {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 767px) {
+  .featured {
+    min-width: 360px;
+    margin: auto;
+  }
 }
 
 .featured__title {
@@ -475,6 +523,11 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 360px) {
+  .featured__item-list {
+    margin-left: 0;
+  }
 }
 
 .featured__item {
@@ -537,6 +590,7 @@ table {
   letter-spacing: 0em;
   text-align: left;
   margin: 24px 0 0 18px;
+  text-transform: uppercase;
 }
 
 .featured__item-text {
@@ -565,6 +619,11 @@ table {
   padding: 14px 40px 14px 40px;
   color: #F16D7F;
 }
+@media (max-width: 767px) {
+  .featured__btn {
+    margin: 41px 0 98px 0;
+  }
+}
 
 .featured__btn:hover {
   background-color: #F16D7F;
@@ -583,10 +642,26 @@ table {
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  .sales__text {
+    padding-top: 101px;
+  }
+}
+@media (max-width: 767px) {
+  .sales__text-special {
+    padding-top: 30px;
+  }
+}
 .sales .sales__list {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .sales .sales__list {
+    justify-content: center;
+    flex-flow: column;
+  }
 }
 .sales .sales__item {
   padding: 105px 105px;
@@ -603,6 +678,13 @@ table {
     padding: 59px 39px;
   }
 }
+@media (max-width: 767px) {
+  .sales .sales__item {
+    padding: 0;
+    min-height: 247px;
+    margin: 0 0 32px 0;
+  }
+}
 .sales .sales__item-first {
   background-image: url(../img/woman.png);
 }
@@ -617,6 +699,13 @@ table {
   flex-grow: 1;
   margin-top: 0px;
   margin-bottom: 96px;
+}
+@media (max-width: 767px) {
+  .sales .sales__item-fourth {
+    background-size: auto;
+    min-height: 111px;
+    margin-bottom: 64px;
+  }
 }
 .sales .sales__item-title {
   color: #F16D7F;

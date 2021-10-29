@@ -18,3 +18,7 @@
     font-weight: $font-weight;
     font-style: $font-style;
 }
+
+@mixin min-width($min-width: 360px) {
+    min-width: $min-width;
+}

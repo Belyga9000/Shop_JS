@@ -2,6 +2,7 @@
     display: flex;
     max-width: 2100px;
     margin: auto;
+    margin-bottom: 64px;
 
     &__img {
         @include tablet {
@@ -26,8 +27,9 @@
         }
 
         @include mobile {
+            @include min-width;
             min-height: 363px;
-            padding: 0 0 0 68px;
+            padding: 0;
             place-content: center;
         }
     }

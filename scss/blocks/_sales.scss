@@ -1,4 +1,17 @@
 .sales {
+
+    &__text {
+        @include mobile {
+            padding-top: 101px;
+        }
+    }
+
+    &__text-special {
+        @include mobile {
+            padding-top: 30px;
+        }
+    }
+
     .sales__list {
         display: flex;
         flex-flow: wrap;
@@ -6,7 +19,10 @@
 
         @include tablet {}
 
-        @include mobile {}
+        @include mobile {
+            justify-content: center;
+            flex-flow: column;
+        }
     }
 
     .sales__item {
@@ -23,7 +39,11 @@
             padding: 59px 39px;
         }
 
-        @include mobile {}
+        @include mobile {
+            padding: 0;
+            min-height: 247px;
+            margin: 0 0 32px 0;
+        }
     }
 
     .sales__item-first {
@@ -43,6 +63,12 @@
         flex-grow: 1;
         margin-top: 0px;
         margin-bottom: 96px;
+
+        @include mobile {
+            background-size: auto;
+            min-height: 111px;
+            margin-bottom: 64px;
+        }
     }
 
     .sales__item-title {
