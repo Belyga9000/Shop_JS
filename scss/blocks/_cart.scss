@@ -1,0 +1,19 @@
+.cart {
+    .cart__title {
+        text-transform: uppercase;
+        padding: 60px 0 60px 0;
+        color: $darkpink;
+        margin-bottom: 96px;
+
+        @include font(24px, 29px, 400);
+
+        @include tablet {
+            margin-bottom: 40px;
+        }
+    }
+
+    .cart__wrp {
+        background: #F8F3F4;
+        @include min-width;
+    }
+}

@@ -1,12 +1,11 @@
 .registration {
     .registration__title {
         text-transform: uppercase;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 29px;
         padding: 60px 0 60px 0;
         color: $darkpink;
         margin-bottom: 64px;
+
+        @include font(24px, 29px, 400);
 
         @include tablet {
             margin-bottom: 40px;
