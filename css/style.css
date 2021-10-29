@@ -713,21 +713,25 @@ table {
   font-size: 24px;
 }
 
-.registration__title {
+.registration .registration__title {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
   padding: 60px 0 60px 0;
   color: #F16D7F;
-  margin-bottom: 30px;
+  margin-bottom: 64px;
 }
-
-.registration__wrp {
+@media (max-width: 1599px) {
+  .registration .registration__title {
+    margin-bottom: 40px;
+  }
+}
+.registration .registration__wrp {
   background: #F8F3F4;
+  min-width: 360px;
 }
-
-.registration__form-heading {
+.registration .registration__form-heading {
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
@@ -735,41 +739,35 @@ table {
   margin-bottom: 20px;
   margin-top: 34px;
 }
-
-.registration__form-input {
+.registration .registration__form-input {
   width: 360px;
   height: 45px;
   border: 1px solid #A4A4A4;
   margin-bottom: 20px;
 }
-
-.registration__form-input::placeholder {
+.registration .registration__form-input::placeholder {
   color: #B1B1B1;
   font-size: 13px;
   font-weight: 300;
   line-height: 16px;
   padding-left: 16p;
 }
-
-.registration__form {
+.registration .registration__form {
   display: flex;
   flex-flow: column;
 }
-
-.registration__form-checkbox-label {
+.registration .registration__form-checkbox-label {
   font-size: 11px;
   font-weight: 300;
   line-height: 13px;
 }
-
-.registration__form-checkbox {
+.registration .registration__form-checkbox {
   display: flex;
   justify-content: flex-start;
   align-items: end;
   margin-top: 11px;
 }
-
-.registration__form-notice {
+.registration .registration__form-notice {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
@@ -777,8 +775,7 @@ table {
   width: 360px;
   margin: -5px 0 40px 0;
 }
-
-.registration__form-btn {
+.registration .registration__form-btn {
   background: #F16D7F;
   color: #ffffff;
   align-self: flex-start;
@@ -790,14 +787,67 @@ table {
   vertical-align: sub;
   margin-bottom: 95px;
 }
-
-.registration__form-btn::after {
+@media (max-width: 767px) {
+  .registration .registration__form-btn {
+    margin-bottom: 40px;
+    align-self: center;
+  }
+}
+.registration .registration__form-btn::after {
   content: url(../img/arrow.png);
   margin-left: 20px;
 }
-
-.registration__form-wrp {
+.registration .registration__form-wrp {
   display: flex;
+  align-items: center;
+}
+@media (max-width: 1599px) {
+  .registration .registration__form-wrp {
+    align-items: normal;
+  }
+}
+@media (max-width: 767px) {
+  .registration .registration__form-wrp {
+    flex-direction: column;
+  }
+}
+.registration .registration__perks {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-left: 128px;
+}
+@media (max-width: 1599px) {
+  .registration .registration__perks {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 300;
+    font-style: normal;
+    margin-left: 22px;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .registration .registration__perks {
+    margin: 0 0 101px 0;
+  }
+}
+.registration .registration__perks .registration__perks-heading {
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.registration .registration__perks .registration__perks-text {
+  margin-bottom: 21px;
+}
+.registration .registration__perks .registration__perks-item {
+  margin-bottom: 16px;
+  padding-left: 43px;
+  position: relative;
+}
+.registration .registration__perks .registration__perks-item::before {
+  position: absolute;
+  left: 0;
+  content: url(../../img/registration_arrow.png);
 }
 
 /*# sourceMappingURL=style.css.map */
