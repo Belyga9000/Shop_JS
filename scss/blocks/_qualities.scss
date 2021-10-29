@@ -1,11 +1,23 @@
 .qualities {
     background: #222224;
+
+    @include mobile {
+        @include min-width;
+    }
 }
 
 .qualities__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 48px 0 40px 0;
+    }
 }
 
 .qualities__item {
@@ -27,8 +39,16 @@
     line-height: 17px;
     color: #FBFBFB;
     margin: 0 0 104px 0;
+
+    @include tablet {
+        margin: 0 0 47px 0;
+    }
 }
 
 .qualities__item-img {
     margin: 104px 0 28px 0;
+
+    @include tablet {
+        margin: 0 0 28px 0;
+    }
 }
