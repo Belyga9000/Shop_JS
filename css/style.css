@@ -135,43 +135,74 @@ table {
 .header {
   background-color: #000000;
 }
-
-.header__search:hover {
+.header .header__search:hover {
   opacity: 0.5;
 }
-
-.header__nav {
+.header .header__nav {
   display: none;
+  position: absolute;
+  background-color: #ffffff;
+  right: -240px;
+  bottom: -771px;
 }
-
-.header__wrp {
+.header .header__nav--show {
+  display: block;
+}
+.header .header__nav-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 37px 163px 24px 34px;
+}
+.header .header__wrp {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 75px;
+  position: relative;
 }
-
-.header__logo {
+.header .header__logo {
   margin: 0 41px 0 0;
 }
-
-.header__link {
+.header .header__link {
   margin: 0 0 0 31px;
 }
-
-.header__link:hover {
+.header .header__link:hover {
   opacity: 0.5;
 }
-
-.header__menu-btn {
+.header .header__menu-btn {
   border: none;
   background-color: transparent;
 }
-
-.header__menu-btn:hover {
+.header .header__menu-btn:hover {
   opacity: 0.5;
 }
 
+.menu-item__sub-item {
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+  padding: 12px 0 12px 55px;
+}
+
+.menu-item__sub-list {
+  margin-bottom: 9px;
+}
+
+.menu-item__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+  margin-left: 33px;
+}
+
+@media (max-width: 767px) {
+  .header .header__link {
+    display: none;
+  }
+}
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -190,36 +221,98 @@ table {
   margin: 0 auto;
 }
 
+@media (max-width: 1599px) {
+  .container {
+    width: 736px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 343px;
+  }
+}
 .brand {
   display: flex;
+  max-width: 2100px;
+  margin: auto;
 }
-
-.brand__wrp {
+@media (max-width: 1599px) {
+  .brand__img {
+    width: 385px;
+    height: 369px;
+  }
+}
+@media (max-width: 767px) {
+  .brand__img {
+    display: none;
+  }
+}
+.brand .brand__wrp {
   background-color: #F1E4E6;
   flex-grow: 1;
   padding: 0 0 0 92px;
   display: flex;
   align-items: center;
 }
-
-.brand__wrp::before {
+@media (max-width: 1599px) {
+  .brand .brand__wrp {
+    padding: 0 0 0 68px;
+  }
+}
+@media (max-width: 767px) {
+  .brand .brand__wrp {
+    min-height: 363px;
+    padding: 0 0 0 68px;
+    place-content: center;
+  }
+}
+.brand .brand__wrp::before {
   content: url(../img/brandpseudo.png);
   margin: 0 16px 0 0;
 }
-
-.brand__title {
+.brand .brand__title {
   font-size: 48px;
   font-weight: 900;
   line-height: 58px;
   text-transform: uppercase;
 }
-
-.brand__subtitle {
+@media (max-width: 1599px) {
+  .brand .brand__title {
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+@media (max-width: 767px) {
+  .brand .brand__title {
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+.brand .brand__subtitle {
   display: flex;
   font-size: 34px;
 }
-
-.brand__subtitle-pink {
+@media (max-width: 1599px) {
+  .brand .brand__subtitle {
+    font-size: 29px;
+    line-height: 24px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+@media (max-width: 767px) {
+  .brand .brand__subtitle {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+.brand .brand__subtitle-pink {
   margin: 0 0 0 8px;
   color: #F16D7F;
 }
@@ -490,13 +583,12 @@ table {
   color: #ffffff;
 }
 
-.sales__list {
+.sales .sales__list {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
 }
-
-.sales__item {
+.sales .sales__item {
   padding: 105px 105px;
   margin: 64px 0 30px 0;
   text-align: center;
@@ -506,27 +598,27 @@ table {
   background-repeat: no-repeat;
   font-size: 16px;
 }
-
-.sales__item-first {
+@media (max-width: 1599px) {
+  .sales .sales__item {
+    padding: 59px 39px;
+  }
+}
+.sales .sales__item-first {
   background-image: url(../img/woman.png);
 }
-
-.sales__item-second {
+.sales .sales__item-second {
   background-image: url(../img/item-man.png);
 }
-
-.sales__item-third {
+.sales .sales__item-third {
   background-image: url(../img/item-kid.png);
 }
-
-.sales__item-fourth {
+.sales .sales__item-fourth {
   background-image: url(../img/item-accesories.png);
   flex-grow: 1;
   margin-top: 0px;
   margin-bottom: 96px;
 }
-
-.sales__item-title {
+.sales .sales__item-title {
   color: #F16D7F;
   font-weight: 700;
   font-size: 24px;
