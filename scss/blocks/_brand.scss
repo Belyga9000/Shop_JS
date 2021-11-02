@@ -2,7 +2,7 @@
     display: flex;
     max-width: 2100px;
     margin: auto;
-    margin-bottom: 64px;
+    margin-bottom: 19px;
 
     &__img {
         @include tablet {
@@ -21,9 +21,11 @@
         padding: 0 0 0 92px;
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 1;
 
         @include tablet {
-            padding: 0 0 0 68px;
+            padding: 0 0 0 19px;
         }
 
         @include mobile {
@@ -31,6 +33,22 @@
             min-height: 363px;
             padding: 0;
             place-content: center;
+        }
+    }
+
+    .brand__wrp::after {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: $pink;
+        z-index: -1;
+
+        @include mobile {
+            display: none;
         }
     }
 
@@ -57,6 +75,7 @@
     .brand__subtitle {
         display: flex;
         font-size: 34px;
+        width: max-content;
 
         @include tablet {
             @include font(29px, 24px, 700);
