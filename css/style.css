@@ -238,7 +238,7 @@ table {
   display: flex;
   max-width: 2100px;
   margin: auto;
-  margin-bottom: 64px;
+  margin-bottom: 19px;
 }
 @media (max-width: 1599px) {
   .brand__img {
@@ -257,10 +257,12 @@ table {
   padding: 0 0 0 92px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 1599px) {
   .brand .brand__wrp {
-    padding: 0 0 0 68px;
+    padding: 0 0 0 19px;
   }
 }
 @media (max-width: 767px) {
@@ -269,6 +271,22 @@ table {
     min-height: 363px;
     padding: 0;
     place-content: center;
+  }
+}
+.brand .brand__wrp::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #F1E4E6;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .brand .brand__wrp::after {
+    display: none;
   }
 }
 .brand .brand__wrp::before {
@@ -300,6 +318,7 @@ table {
 .brand .brand__subtitle {
   display: flex;
   font-size: 34px;
+  width: max-content;
 }
 @media (max-width: 1599px) {
   .brand .brand__subtitle {
@@ -656,6 +675,7 @@ table {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
+  padding-left: 15px;
 }
 @media (max-width: 767px) {
   .sales .sales__list {
@@ -676,6 +696,7 @@ table {
 @media (max-width: 1599px) {
   .sales .sales__item {
     padding: 59px 39px;
+    margin-top: 0;
   }
 }
 @media (max-width: 767px) {
