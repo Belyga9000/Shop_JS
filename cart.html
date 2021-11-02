@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -58,50 +58,59 @@
         </div>
     </header>
     <main>
-        <section class="cart container">
+        <section class="cart">
             <div class="cart__wrp">
                 <h1 class="cart__title container">shopping cart</h1>
             </div>
-            <div class="cart__card">
-                <img src="/img/cart_man1.jpg" alt="man">
-                <div class="cart__card-text">
-                    <h2 class="cart__card-text-heading">Mango  people  t-shirt</h2>
-                    <ul class="cart__card-text-list">
-                        <li class="cart__list-text"><span class="cart__list-price">$300</span></li>
-                        <li class="cart__list-text">Red</li>
-                        <li class="cart__list-text">Xl</li>
-                        <li class="cart__list-text"><span class="cart__list-quantity">2</span></li>
-                    </ul>
+            <div class="cart__items-wrp container">
+                <div class="cart__items">
+                    <div class="cart__item">
+                        <img class="cart__item-img" src="img/cart_man1.jpg" alt="man">
+                        <div class="cart__item-wrp">
+                            <h2 class="cart__item-heading">Mango  people  t-shirt</h2>
+                            <i class="fas fa-times"></i>
+                            <ul class="cart__item-list">
+                                <li class="cart__item-text">Price: <span class="cart__list-price">$300</span></li>
+                                <li class="cart__item-text">Color: Red</li>
+                                <li class="cart__item-text">Size: Xl</li>
+                                <li class="cart__item-text">Quantity: <span class="cart__list-quantity">2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cart__item">
+                        <img class="cart__item-img" src="img/cart_man2.jpg" alt="man">
+                        <div class="cart__item-wrp">
+                            <h2 class="cart__item-heading">Mango  people  t-shirt</h2>
+                            <i class="fas fa-times"></i>
+                            <ul class="cart__item-list">
+                                <li class="cart__item-text">Price: <span class="cart__list-price">$300</span></li>
+                                <li class="cart__item-text">Color: Red</li>
+                                <li class="cart__item-text">Size: Xl</li>
+                                <li class="cart__item-text">Quantity: <span class="cart__list-quantity">2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cart__item-btm-wrp">
+                        <button class="cart__item-btn">clear shopping cart</button>
+                        <button class="cart__item-btn">continue shopping</button>
+                    </div>
                 </div>
+                <div class="cart__adress-filter">
+                        <div class="cart__adress">
+                            <h2 class="cart__adress-heading">shipping adress</h2>
+                            <input type="text" class="cart__input" placeholder="City">
+                            <input type="text" class="cart__input" placeholder="State">
+                            <input type="text" class="cart__input" placeholder="Postcode/Zip">
+                            <button class="cart__adress-btn">get a quote</button>
+                        </div>
+                        <div class="cart__checkout">
+                            <p class="cart__checkout-sub">sub total<span class="cart__checkout-amount-sub">$900</span></p>
+                            <p class="cart__checkout-total">grand total<span class="cart__checkout-amount-total">$900</span></p>
+                            <hr class="cart__checkout-line">
+                            <button class="cart__checkout-btn">proceed to checkout</button>
+                         </div>
+                 </div>
             </div>
-            <div class="cart__card">
-                <img src="/img/cart_man2.jpg" alt="man">
-                <div class="cart__card-text">
-                    <h2 class="cart__card-text-heading">Mango  people  t-shirt</h2>
-                    <ul class="cart__card-text-list">
-                        <li class="cart__list-text"><span class="cart__list-price">$300</span></li>
-                        <li class="cart__list-text">Red</li>
-                        <li class="cart__list-text">Xl</li>
-                        <li class="cart__list-text"><span class="cart__list-quantity">2</span></li>
-                    </ul>
-                </div>
-            </div>
-            <button class="cart__card-btn-clear">clear shopping cart</button>
-            <button class="cart__card-btn-continue">continue shopping</button>
-        </div>
-        <div class="cart__adress">
-            <h2 class="cart__adress-heading">shipping adress</h2>
-            <input type="text" class="cart__adress-city" placeholder="City">
-            <input type="text" class="cart__adress-state" placeholder="State">
-            <input type="text" class="cart__adress-postcode" placeholder="Postcode/Zip">
-            <button class="cart__adress-btn">get a quote</button>
-        <div class="cart__adress-checkout">
-            <p class="cart__adress-text-sub"></p>
-            <p class="cart__adress-text-total">grand total<span class="cart__adress-price"></span></p>
-        <hr class="cart__adress-line">
-        <button class="cart__adress-btn-checkout"></button>
-        </div>
-        </div>
         </section>
     </main>
     <footer class="footer">
@@ -129,7 +138,7 @@
                     <li class="footer__social-list-item"><a class="social__item-link" href="#"><img src="img/twitter.svg" alt="twitter"></a></li>
                 </ul>
             </div>
-    </div>
+        </div>
     </footer>
     <script src="js/script.js"></script>
 </body>
