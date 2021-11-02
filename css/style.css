@@ -106,7 +106,7 @@ section {
 }
 
 body {
-  line-height: 1;
+  font-family: Lato;
 }
 
 ol,
@@ -234,6 +234,10 @@ table {
     width: 343px;
   }
 }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../fonts/lato-v20-latin-regular.woff2") format("woff2"), url("../fonts/lato-v20-latin-regular.woff") format("woff");
+}
 .brand {
   display: flex;
   max-width: 2100px;
@@ -257,8 +261,6 @@ table {
   padding: 0 0 0 92px;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 1;
 }
 @media (max-width: 1599px) {
   .brand .brand__wrp {
@@ -273,34 +275,20 @@ table {
     place-content: center;
   }
 }
-.brand .brand__wrp::after {
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  background-color: #F1E4E6;
-  z-index: -1;
-}
-@media (max-width: 767px) {
-  .brand .brand__wrp::after {
-    display: none;
-  }
-}
-.brand .brand__wrp::before {
+
+.brand__wrp::before {
   content: url(../img/brandpseudo.png);
   margin: 0 16px 0 0;
 }
-.brand .brand__title {
+
+.brand__title {
   font-size: 48px;
   font-weight: 900;
   line-height: 58px;
   text-transform: uppercase;
 }
 @media (max-width: 1599px) {
-  .brand .brand__title {
+  .brand__title {
     font-size: 44px;
     line-height: 52px;
     font-weight: 900;
@@ -308,20 +296,21 @@ table {
   }
 }
 @media (max-width: 767px) {
-  .brand .brand__title {
+  .brand__title {
     font-size: 38px;
     line-height: 46px;
     font-weight: 900;
     font-style: normal;
   }
 }
-.brand .brand__subtitle {
+
+.brand__subtitle {
   display: flex;
   font-size: 34px;
   width: max-content;
 }
 @media (max-width: 1599px) {
-  .brand .brand__subtitle {
+  .brand__subtitle {
     font-size: 29px;
     line-height: 24px;
     font-weight: 700;
@@ -329,14 +318,15 @@ table {
   }
 }
 @media (max-width: 767px) {
-  .brand .brand__subtitle {
+  .brand__subtitle {
     font-size: 24px;
     line-height: 20px;
     font-weight: 700;
     font-style: normal;
   }
 }
-.brand .brand__subtitle-pink {
+
+.brand__subtitle-pink {
   margin: 0 0 0 8px;
   color: #F16D7F;
 }
@@ -542,10 +532,11 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
-@media (max-width: 360px) {
+@media (max-width: 767px) {
   .featured__item-list {
-    margin-left: 0;
+    justify-content: center;
   }
 }
 
@@ -661,21 +652,12 @@ table {
   color: #ffffff;
 }
 
-@media (max-width: 767px) {
-  .sales__text {
-    padding-top: 101px;
-  }
-}
-@media (max-width: 767px) {
-  .sales__text-special {
-    padding-top: 30px;
-  }
-}
 .sales .sales__list {
   display: flex;
   flex-flow: wrap;
+  align-items: center;
   justify-content: space-between;
-  padding-left: 15px;
+  align-content: center;
 }
 @media (max-width: 767px) {
   .sales .sales__list {
@@ -684,19 +666,25 @@ table {
   }
 }
 .sales .sales__item {
-  padding: 105px 105px;
   margin: 64px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 16px;
+  width: 360px;
+  height: 260px;
 }
 @media (max-width: 1599px) {
   .sales .sales__item {
-    padding: 59px 39px;
     margin-top: 0;
+    width: 233px;
+    height: 167px;
   }
 }
 @media (max-width: 767px) {
@@ -704,6 +692,8 @@ table {
     padding: 0;
     min-height: 247px;
     margin: 0 0 32px 0;
+    width: 343px;
+    height: 247px;
   }
 }
 .sales .sales__item-first {
@@ -720,18 +710,35 @@ table {
   flex-grow: 1;
   margin-top: 0px;
   margin-bottom: 96px;
+  width: 100%;
+  height: 180px;
+}
+@media (max-width: 1599px) {
+  .sales .sales__item-fourth {
+    height: 116px;
+  }
 }
 @media (max-width: 767px) {
   .sales .sales__item-fourth {
     background-size: auto;
     min-height: 111px;
+    min-width: 343px;
     margin-bottom: 64px;
+    height: 180px;
   }
 }
 .sales .sales__item-title {
   color: #F16D7F;
-  font-weight: 700;
   font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  font-style: normal;
+}
+.sales .sales__text {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .registration .registration__title {

@@ -27,3 +27,10 @@
         width: 343px;
     }
 }
+
+@font-face {
+    font-family: "Lato";
+    src: local("Lato"),
+        url("../fonts/lato-v20-latin-regular.woff2") format("woff2"),
+        url("../fonts/lato-v20-latin-regular.woff") format("woff"),
+}
